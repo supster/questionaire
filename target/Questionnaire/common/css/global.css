@@ -1,12 +1,10 @@
 body {
   min-height: 2000px;
-  padding-top: 80px; }
+  padding-top: 100px; }
 
 .navbar-controls {
   top: 51px;
   background-color: #5bc0de;
   color: #fff;
-  text-align: right;
-  vertical-align: middle;
-  height: 40px;
-  padding-top: 10px; }
+  height: 50px;
+  padding: 8px 0; }

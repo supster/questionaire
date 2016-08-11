@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateAnswer, updateScore } from '../redux/ScoreRedux';
+import { updateScore } from '../redux/ScoreRedux';
 
 class Question extends React.Component {
   constructor(props) {
@@ -60,7 +60,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatcherToProps = (dispatch) => ({
   onAnswerChange: (id, answer, prevAnswer) => {
-    dispatch(updateAnswer(id, answer));
     dispatch(updateScore(prevAnswer, answer));
   }
 });
