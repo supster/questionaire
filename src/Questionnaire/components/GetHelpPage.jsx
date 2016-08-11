@@ -9,6 +9,10 @@ class GetHelpPage extends React.Component {
     this.onClickOK = this.onClickOK.bind(this);
   }
 
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
   onClickOK() {
     this.setState({ thankyou: true });
   }
