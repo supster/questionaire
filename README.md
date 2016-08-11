@@ -61,14 +61,12 @@ Assumption
 Approach
 -------------
 
-* I set up the environment using:
-  - gulp: task runner
-  - webpack: module bundler
-  - express: web server
-
-* Source code is under src folder.
+* I decided build a generic questionnaire form, so I designed to components and objects as such.
+* Qestions could be supplied from a json file or an API endpoint.
+* Since I didn't create an API, data is supplied from `src/test/fixture/questions.json`.
+* Most interactions occur when users click on the radio buttons which reside in `Question` component.  The component dispatch an `UPDATE_SCORE` action which results in a state change in `ScoreBar` component.
+* Source code lives under src folder.
 * Files in the src folder gets compiled and copied into the target folder.
 * Redux is used to handle state and data.
-* Since I didn't create an API, data is supplied from `src/test/fixture/questions.json`.
 * I use Bootstrap grid system to make the page responsive.
-* I decided to use react router to navigate from Questionnaire to GetHelpPage, since we only need to show fake data.
+* I use react router to navigate from `Questionnaire` to `GetHelpPage`, since we only need to show fake data.
