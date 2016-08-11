@@ -20,11 +20,55 @@ Implementation Notes - You can find the 9 questions and the scoring legend here:
 Implementation Notes - You can just show three fake therapist names and have some input that allows the user to select one and hit submit with some thank you message.
 
 
-Assumption
------------
-
-* All questions need to be answered for score to show up
-
-
 Environment Setup
 -----------------
+
+#### Clone the repository
+
+    git clone git@github.com:supster/phq-9.git
+
+#### Install nvm (node version manager)
+
+Used to manage the version of node. See [installation](https://github.com/creationix/nvm#installation) or use the one line install:
+
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+
+#### Install node
+
+From inside the repository directory, run:
+
+    nvm install
+
+#### Install dependencies
+
+From inside the repository directory, run:
+
+    npm install
+
+Build and Run
+--------------
+
+#### `gulp run`
+
+Build the project, watch changes, and start a server on <a href="http://localhost:3000/">http://localhost:3000/</a>.
+
+Assumption
+-------------
+
+* When a user scores more than 9 points, 'Get Help' button appears.
+* A user doesn't need to complete the questionnaire for score and/or 'Get Help' button to show up.
+
+Approach
+-------------
+
+* I set up the environment using:
+  - gulp: task runner
+  - webpack: module bundler
+  - express: web server
+
+* Source code is under src folder.
+* Files in the src folder gets compiled and copied into the target folder.
+* Redux is used to handle state and data.
+* Since I didn't create an API, data is supplied from `src/test/fixture/questions.json`.
+* I use Bootstrap grid system to make the page responsive.
+* I decided to use react router to navigate from Questionnaire to GetHelpPage, since we only need to show fake data.
