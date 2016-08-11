@@ -1,7 +1,6 @@
 body {
   min-height: 2000px;
-  padding-top: 80px;
-}
+  padding-top: 80px; }
 
 .navbar-controls {
   top: 51px;
@@ -10,5 +9,4 @@ body {
   text-align: right;
   vertical-align: middle;
   height: 40px;
-  padding-top: 10px;
-}
+  padding-top: 10px; }

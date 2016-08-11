@@ -1,4 +1,6 @@
 {
+  "title": "Patient Health Questionnaire (PHQ-9)",
+  "subtitle": "Over the last two weeks, how often have you been bothered by any of the following problems?",
   "questions": [
     "Little interest or pleasure in doing things?",
     "Feeling down, depressed, or hopeless?",

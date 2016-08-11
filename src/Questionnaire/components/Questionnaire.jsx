@@ -1,8 +1,9 @@
 import React from 'react';
 import PageTemplate from '../../common/components/PageTemplate';
-import Question from './Question'
+import Question from './Question';
+import ScoreBar from './ScoreBar';
 
-const Questionnaire = ({ title, subtitle, data }) => {
+const Questionnaire = ({ data }) => {
   const choiceData = data["choices"];
   const questionData = data["questions"];
   const questions = questionData.map((question, index) => (
@@ -13,19 +14,17 @@ const Questionnaire = ({ title, subtitle, data }) => {
 
   return (
     <PageTemplate>
-      <h3>{title}</h3>
-      <h5>{subtitle}</h5>
-      <br/>
+      <ScoreBar  />
+      <h3>{data["title"]}</h3>
+      <h5>{data["subtitle"]}</h5>
       <div className="row">
         {questions}
       </div>
     </PageTemplate>
   )
-}
+};
 
 Questionnaire.propTypes = {
-  title: React.PropTypes.string,
-  subtitle: React.PropTypes.string,
   data: React.PropTypes.object
 };
 

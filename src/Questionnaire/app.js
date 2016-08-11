@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from './redux';
 import Questionaire from './components/Questionnaire';
 import QuestionData from './test/fixture/questions';
 
+const store = createStore(reducers);
+
 if (typeof document !== 'undefined') {
   ReactDOM.render(
-    <Questionaire title='Patient Health Questionnaire (PHQ-9)'
-                  subtitle='Over the last two weeks, how often have you been bothered by any of the following problems?'
-                  data={QuestionData} />,
+    <Provider store={store}>
+      <Questionaire data={QuestionData} />
+    </Provider>,
     document.getElementById('questionnaire')
   );
 }
